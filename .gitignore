@@ -1,0 +1,4 @@
+/venv
+Pipfile.lock
+.idea
+.DS_Store
