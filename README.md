@@ -74,7 +74,7 @@
 ## log
     2019-08-14  添加.gitignore,删除多余文件
                 修正DB.sql
-                添加docker打包
+                添加docker打包（启动命令：docker-compose up）
     
 ## 参考文献
 
