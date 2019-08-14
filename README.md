@@ -30,22 +30,13 @@
     
     
 ## 技术点
+    pipenv
     flask_restplus：
-    api.namespace() 创建带有URL前缀的命名空间，description 描述方法
-    eg: ns_user = Namespace(name='users', description='用户相关操作')
-    @ns_user.route() 装饰指定网址关联资源
-    marshal_with()装饰器接受你的数据对象，并对其按照model格式进行字段过滤
-    Resource: 返回值转换成相应对象
-    eg:
-    @ns_user.route('/getUserList')
-    class GetUserList(Resource):
-        @ns_user.marshal_list_with(user)
-        def get(self):
-            """
-            返回用户列表.
-            """
-            users = User.query.all()
-        return users
+        api.namespace() 创建带有URL前缀的命名空间，description 描述方法
+        eg: ns_user = Namespace(name='users', description='用户相关操作')
+        @ns_user.route() 装饰指定网址关联资源
+        marshal_with()装饰器接受你的数据对象，并对其按照model格式进行字段过滤
+        Resource: 返回值转换成相应对象
         
     嵌套字段：
         relationship
@@ -80,7 +71,11 @@
         jsonify直接返回的是Content-type:application/json的响应对象(Response对象)
         json.dumps返回的，则是Content-type:text/html,charset=utf-8的HTML格式
         
-        
+## log
+    2019-08-14  添加.gitignore,删除多余文件
+                修正DB.sql
+                添加docker打包
+    
 ## 参考文献
 
 [Flask 快速入门](http://docs.jinkan.org/docs/flask/quickstart.html# "悬停")

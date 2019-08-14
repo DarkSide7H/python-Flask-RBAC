@@ -13,4 +13,5 @@ log = logging.getLogger(__name__)
 
 if __name__ == '__main__':
     log.info('Starting server')
-    app.run(debug=FLASK_DEBUG)
+    # 指定host，防止docker无法打开
+    app.run(host='0.0.0.0', debug=FLASK_DEBUG)
